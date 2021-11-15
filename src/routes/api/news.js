@@ -1,12 +1,11 @@
 const express = require('express')
-const config = require('../../config')
 const getArticles = require('../../controller/scrape.controller')
 
 const routes = express.Router()
 
 
 // get all news articles
-routes.get('/', async (req, res, next)=> {
+routes.get('/', async (_req, res, next)=> {
     try {
         const articles = await getArticles()
         res.json({
@@ -19,8 +18,9 @@ routes.get('/', async (req, res, next)=> {
     }
 })
 
+
 // get all articles from specific newpaper by id
-routes.get('/:newspaperId', async (req, res, next) => {
+routes.get('/:newspaperId', async (req, res, next)=> {
     try {
         const { newspaperId } = req.params
         const articles = await getArticles(newspaperId)

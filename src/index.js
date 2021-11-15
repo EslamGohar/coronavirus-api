@@ -1,6 +1,6 @@
 const express = require('express')
 const morgan = require('morgan')
-const config = require('./config')
+const config = require('./config/index')
 const routes = require('./routes')
 const newsRouter = require('./routes/api/news')
 

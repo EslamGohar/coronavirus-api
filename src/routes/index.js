@@ -3,8 +3,7 @@ const newsRoutes = require('./api/news')
 
 const routes = express.Router()
 
-routes.get('/news', newsRoutes)
-
+routes.use('/news', newsRoutes)
 
 
 module.exports = routes

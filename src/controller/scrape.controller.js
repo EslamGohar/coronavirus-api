@@ -2,6 +2,7 @@ const axios = require('axios')
 const cheerio = require('cheerio')
 const newspapers = require('../data/newspapers')
 
+
 async function getArticles(newspaperId = null) {
     const articles = []
 
